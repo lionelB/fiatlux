@@ -1,0 +1,104 @@
+[user]
+  name = LionelB
+  email = lionel@lumographe.fr
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  am = amend
+  amend = commit --amend
+  oops = commit --amend --no-edit
+
+  #git tree  info
+  stat = shortlog -sne
+  lc = !git online ORIG_HEAD.. --stat --no-merges
+  lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ar)%Creset'
+
+[core]
+  # Don't paginate output by default
+  pager = cat
+  #
+  # Out of luck: on Windows w/o msysGit? You may have Notepad++…
+  # editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+  #
+  # If you want to use Sublime Text 2's subl wrapper:
+  editor = vim
+  #
+  # Don't consider trailing space change as a cause for merge conflicts
+  whitespace = -trailing-space
+  excludesfile = ~/.gitignore-global
+
+  #SAFER `git rebase` on OSX
+  # see <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+[diff]
+  # Use better, descriptive initials (c, i, w) instead of a/b.
+  mnemonicPrefix = true
+  # Show renames/moves as such
+  renames = true
+  # When using --word-diff, assume --word-diff-regex=.
+  wordRegex = .
+  # Display submodule-related information (commit listings)
+  submodule = log
+
+[fetch]
+  # Auto-fetch submodule changes (sadly, won't auto-update)
+  recurseSubmodules = on-demand
+
+[grep]
+  # Consider most regexes to be ERE
+  extendedRegexp = true
+
+[log]
+  # Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+  abbrevCommit = true
+
+[merge]
+  # Display common-ancestor blocks in conflict hunks
+  conflictStyle = diff3
+
+[mergetool]
+  # Clean up backup files created by merge tools on tool exit
+  keepBackup = false
+  # Clean up temp files created by merge tools on tool exit
+  keepTemporaries = false
+  # Auto-accept file prompts when launching merge tools
+  prompt = false
+
+[pull]
+  # This is GREAT… when you know what you're doing and are careful
+  # not to pull --no-rebase over a local line containing a true merge.
+  # rebase = true
+  # WARNING! This option, which does away with the one gotcha of
+  # auto-rebasing on pulls, is only available from 1.8.5 onwards.
+  rebase = preserve
+
+[push]
+  # Default push should only push the current branch to its push target, regardless of its remote name
+  default = upstream
+  # When pushing, also push tags whose commit-ishs are now reachable upstream
+  followTags = true
+
+[rerere]
+  # If, like me, you like rerere, uncomment these
+  # autoupdate = true
+  # enabled = true
+
+[status]
+  # Display submodule rev change summaries in status
+  submoduleSummary = true
+  # Recursively traverse untracked directories to display all contents
+  showUntrackedFiles = all
+
+[color "branch"]
+  # Blue on black is hard to read in git branch -vv: use cyan instead
+  upstream = cyan
+
+[tag]
+  # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+  sort = version:refname

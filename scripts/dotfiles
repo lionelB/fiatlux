@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+echo_title "Installing/updating your Dotfiles"
+
+# Prompt actions
+skip=false
+backup=false
+force=$([ "$LAUNCHER_INSTALL" == true ] && echo "all" || echo "false")
+
+for source in $FIATLUX_PATH/dotfiles/*; do
+  dest=$HOME/".`basename $source`"
+  
+  if [ -L $dest ] ; then
+    # $dest is a symbolic link
+    echo_info "file `basename $dest` already linked!"
+
+  elif [ -f $dest ] || [ -d $dest ]; then
+    if [ $skip != all ] && [ $force != all ] && [ $backup != all ] ; then
+      echo -e "${COLOR_YELLOW} `basename $source`${COLOR_RESET} already exists"
+      echo "What should I do ?"
+      echo " - [s]kip"
+      echo " - [S]kip all"
+      echo " - [r]Replace"
+      echo " - [R]eplace all"
+      echo " - [b]ackup the existing one"
+      echo " - [B]ackup all action"
+
+      read -p "Choose an action: " action
+
+     case $action in
+        s) skip=true ;;
+        r) force=true ;;
+        b) backup=true ;;
+        S) skip=all ;;
+        R) force=all ;;
+        B) backup=all ;;
+      esac
+    fi
+  
+    if [ $force == all ] || [ $force == true ]; then
+      rm -rf $dest
+      echo_info "remove $dest"
+      [ $force == true ] &&  force=false
+    elif [ $backup == all ] || [ $backup == true ]; then
+      mv $dest $dest\.backup
+      echo_info "rename $dest to $dest.backup"
+      [ $backup == true ] && backup=false
+    fi
+    if [ $skip == all ] || [ $skip == true ]; then
+      echo_info "skip $dest"
+      [ $skip == true ] &&  skip=false
+    else
+      ln -s $source $dest
+      echo_info "$source linked to $dest"
+    fi
+  else
+    # no conflict, create symlink
+    ln -s $source $dest
+    echo_info "$source linked to $dest"
+  fi
+done
+
+echo_success "dotfiles installed !"
+# Load new bash profile
+source ~/.bash_profile
+echo_info "Open a new terminal to take advantage of the new confifuration"
+
+
+

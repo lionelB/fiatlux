@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+[ -z "$PS1" ] && return
+echo "YO!"
+alias ls='ls -alG'
+
+

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#setup install path
+export FIATLUX_PATH=$HOME/fiatlux
+
+# update files from git
+git -C $FIATLUX_PATH pull origin master
+
+# Load all helpers functions
+for file in $FIATLUX_PATH/functions/*; do
+  source $file
+done
+
+echo_title "fiat lux Update"
+
+# ask for admin privilege
+sudo -v
+
+# Installing .dotfiles
+source $FIATLUX_PATH/scripts/dotfiles
+

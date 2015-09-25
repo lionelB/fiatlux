@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+export COLOR_RED='\033[0;31m'
+export COLOR_GREEN='\033[0;32m'
+export COLOR_YELLOW='\033[0;33m'
+export COLOR_BLUE='\033[0;34m'
+export COLOR_CYAN='\033[0;36m'
+export COLOR_RESET='\033[0m'
+
+export CHAR_OK=✔︎
+export CHAR_ERR=✘
+export CHAR_DONE=🎉
+export CHAR_LIST=☕︎
+
+function echo_title() {
+   echo -e "${COLOR_CYAN} $@ ${COLOR_RESET}"
+}
+function echo_fail() {
+   echo -e " ${COLOR_RED}${CHAR_ERR}${COLOR_RESET} $@i\n"
+}
+function echo_info() {
+   echo -e " ${COLOR_YELLOW}${CHAR_LIST}${COLOR_RESET} $@"
+}
+function echo_success() {
+   echo -e " ${COLOR_GREEN}${CHAR_OK}${COLOR_RESET} $@"
+}
+
+
