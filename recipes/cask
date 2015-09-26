@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+
+function caskinstall(){
+  brew cask install "${@}" 2> /dev/null
+}
+
+
+# Install formulae
+brewinstall caskroom/cask/brew-cask
+
+brew tap caskroom/cask
+brew tap caskroom/versions
+
+caskinstall flux
+
+caskinstall qlprettypatch
+caskinstall prefs-editor
+caskinstall gifrocket
+
+caskinstall qlcolorcode
+caskinstall qlmarkdown
+caskinstall quicklook-json
+caskinstall quicklook-csv
+caskinstall webpquicklook
+caskinstall android-file-transfer
+caskinstall betterzipql
+
+
+caskinstall limechat
+caskinstall imageoptim
+caskinstall image2icon
+caskinstall vlc
+caskinstall acorn
+
+caskinstall firefox
+# caskinstall firefox-nightly
+caskinstall google-chrome
+# caskinstall google-chrome-canary
+caskinstall opera
+caskinstall chromium 
+
+caskinstall skype
+caskinstall dropbox
+
+caskinstall tunnelblick
+caskinstall transmission

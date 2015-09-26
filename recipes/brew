@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+if ! type "brew" > /dev/null; then
+  echo_title "installing brew & tools"
+
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew doctor
+else
+  echo "-- Updating brew"
+  echo ""
+
+  brew update
+  brew upgrade
+fi
+
+brew tap homebrew/dupes
+brew tap homebrew/versions
+brew tap caskroom/cask
+brew tap caskroom/fonts
+
+
+# easy brewinstall function
+function brewinstall() {
+  brew install "${@}" 2> /dev/null
+}
+
+# Git & GihHub
+brewinstall hub
+brewinstall ghi
+
+brewinstall tree
+brewinstall exiftool
+brewinstall ffmpeg --with-libass --with-fontconfig
+brewinstall imagemagick --with-fontconfig
+brewinstall youtube-dl
+
+brewinstall python
+

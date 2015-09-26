@@ -18,4 +18,4 @@ sudo -v
 
 # Installing .dotfiles
 source $FIATLUX_PATH/scripts/dotfiles
-
+source $FIATLUX_PATH/scripts/recipes

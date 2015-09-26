@@ -1,1 +1,11 @@
-echo "happydev recipes"
+#!/usr/bin/env bash
+
+echo_title  "Adding dev recipes"
+
+for recipe in $FIATLUX_PATH/recipes/*; do
+ source $recipe
+done
+
+echo_success "Recipe have been installed!"
+
+
