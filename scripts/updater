@@ -16,8 +16,8 @@ echo_title " 🔆  Fiat Lux!"
 sudo -v
 
 # Installing .dotfiles
-# source $FIATLUX_PATH/scripts/dotfiles
-# source $FIATLUX_PATH/scripts/recipes
+source $FIATLUX_PATH/scripts/dotfiles
+source $FIATLUX_PATH/scripts/recipes
 source $FIATLUX_PATH/scripts/osx
-echo -e "${CHAR_DONE} ${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
+echo -e " ${CHAR_DONE}${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
 

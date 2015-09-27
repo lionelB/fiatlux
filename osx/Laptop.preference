@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo_info "Set laptop name preference"
+
+sudo scutil --set ComputerName "lionelB.mba"
+sudo scutil --set HostName "lionelB.mba"
+sudo scutil --set LocalHostName "lionel-mba"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "lionelb-mba"
