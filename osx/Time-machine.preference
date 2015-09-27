@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo_info "Time machine preference"
+
+# Disable local Time Machine backups
+hash tmutil &> /dev/null && sudo tmutil disablelocal
+

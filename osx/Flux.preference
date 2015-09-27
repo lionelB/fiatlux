@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo_info "Flux preference"
+
+defaults write org.herf.Flux moveToApplicationsFolderAlertSuppress -bool true
+defaults write org.href.Flux SUAutomaticallyUpdate 1

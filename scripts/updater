@@ -10,12 +10,14 @@ git -C $FIATLUX_PATH pull origin master
 for file in $FIATLUX_PATH/functions/*; do
   source $file
 done
-
-echo_title "fiat lux Update"
+echo_title " 🔆  Fiat Lux!"
 
 # ask for admin privilege
 sudo -v
 
 # Installing .dotfiles
-source $FIATLUX_PATH/scripts/dotfiles
-source $FIATLUX_PATH/scripts/recipes
+# source $FIATLUX_PATH/scripts/dotfiles
+# source $FIATLUX_PATH/scripts/recipes
+source $FIATLUX_PATH/scripts/osx
+echo -e "${CHAR_DONE} ${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
+
