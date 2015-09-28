@@ -15,6 +15,7 @@ brew tap caskroom/versions
 caskinstall flux
 
 caskinstall qlprettypatch
+caskinstall karabiner
 caskinstall prefs-editor
 caskinstall gifrocket
 
