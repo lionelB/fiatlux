@@ -51,10 +51,8 @@ if [ -d $FIATLUX_PATH/.git ]; then
 
   export LAUNCHER_INSTALL=true
 
-  source $FIATLUX_PATH/scripts/updater
-  # fiatlux-update()
+  source $FIATLUX_PATH/updater
 
-  echo "Retrieving lumo configurator failed"
   echo "Aborting  fiat-lux launcher"
 fi
 
