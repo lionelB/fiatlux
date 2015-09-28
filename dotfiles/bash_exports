@@ -27,3 +27,5 @@ export HISTFILESIZE=10000
 # (default is 500)
 export HISTSIZE=10000
 
+# Add ~/.local/bin to $PATH
+export PATH="$HOME/.local/bin:$PATH"
