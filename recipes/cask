@@ -34,12 +34,14 @@ caskinstall vlc
 caskinstall acorn
 
 caskinstall firefox
-# caskinstall firefox-nightly
+caskinstall firefox-nightly
 caskinstall google-chrome
-# caskinstall google-chrome-canary
+caskinstall google-chrome-canary
 caskinstall opera
 caskinstall chromium 
 
+caskinstall slack
+caskinstall google-hangoutk
 caskinstall skype
 caskinstall dropbox
 
