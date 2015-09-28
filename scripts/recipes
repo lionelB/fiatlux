@@ -6,6 +6,6 @@ for recipe in $FIATLUX_PATH/recipes/*; do
  source $recipe
 done
 
-echo_success "Recipe have been installed!"
+echo_success "Recipes have been installed!"
 
 
