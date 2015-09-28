@@ -7,9 +7,9 @@ skip=false
 backup=false
 force=$([ "$LAUNCHER_INSTALL" == true ] && echo "all" || echo "false")
 
-for source in $FIATLUX_PATH/dotfiles/*; do
-  dest=$HOME/".`basename $source`"
-  
+for source in {bash_profile,vimrc,vim,inputrc,gitignore-global,gitconfig}; do
+  dest=$HOME/".`basename $FIATLUX_PATH/dotfiles/$source`"
+
   if [ -L $dest ] ; then
     # $dest is a symbolic link
     echo_info "file `basename $dest` already linked!"
@@ -63,7 +63,6 @@ done
 echo_success "dotfiles installed !"
 # Load new bash profile
 source ~/.bash_profile
-echo_info "Open a new terminal to take advantage of the new confifuration"
 
 
 

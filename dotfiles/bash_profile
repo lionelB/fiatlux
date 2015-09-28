@@ -1,10 +1,27 @@
 #!/usr/bin/env bash
 
 [ -z "$PS1" ] && return
-echo "YO!"
-alias ls='ls -alG'
 
 
+export FIATLUX_PATH=$HOME/fiatlux
 
-export NVM_DIR="/Users/lionel/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# set 256 color profile where possible
+if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+  export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then
+  export TERM=xterm-256color
+fi
+
+
+# Add tab completion for many Bash commands
+if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+  source "$(brew --prefix)/share/bash-completion/bash_completion";
+fi;
+
+for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
+  source ${FIATLUX_PATH}/dotfiles/$dotfile
+done;
+

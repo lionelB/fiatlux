@@ -30,7 +30,7 @@ endif
 " tabs & spaces
 "
 set tabstop=2       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
+set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 
 
@@ -45,7 +45,14 @@ set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set list
-
+set autoindent
+set autoread
+set copyindent
+set pastetoggle=F3
+set clipboard=unnamed
+set noerrorbells
+set visualbell
+set title
 
 "
 " Searching
@@ -56,8 +63,16 @@ set ignorecase          " Ignore case while searching
 set smartcase           " except if it is an uppercase search
 set gdefault            " Apply global substitutions
 set magic               " Set magic o, for regexp
+set linespace=3
+set scrolloff=3
 nnoremap <leader><space> :nohlsearch<CR>
 
+"
+" Buffer
+"
+nnoremap <leader>q :bp\|bd #<CR>
+nnoremap <space>l :bnext<CR>
+nnoremap <space>h :bprevious<CR>
 
 "
 " Folding code
@@ -87,6 +102,16 @@ let mapleader=","       " leader is comma
 " jk is escape
 inoremap jk <esc>
 nnoremap <leader>s :mksession<CR>
+
+
+"
+" Indent
+"
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 
 "
@@ -128,3 +153,4 @@ set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h12 " Use the Powerline specif
 
 " " Line and column position and counts.
 set statusline+=\ (line\ %l\/%L\/%P,\ col\ %03c)
+

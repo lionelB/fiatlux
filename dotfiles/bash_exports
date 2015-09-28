@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# vim as default
+export EDITOR="vim"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Prefer Fr  and use UTF-8
+export LC_ALL="fr_FR.UTF-8"
+export LANG="fr_FR"
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Avoir un historique homogène même avec plusieurs terminaux
+shopt -s histappend
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Ignore duplicate commands in the history
+export HISTCONTROL=ignoredups
+
+# Increase the maximum number of lines contained in the history file
+# (default is 500)
+export HISTFILESIZE=10000
+
+# Increase the maximum number of commands to remember
+# (default is 500)
+export HISTSIZE=10000
+
