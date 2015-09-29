@@ -22,7 +22,7 @@ call plug#end()
 " History
 "
 if &history < 1000
-  set history=1000
+set history=1000
 endif
 
 
@@ -48,7 +48,10 @@ set list
 set autoindent
 set autoread
 set copyindent
-set pastetoggle=F3
+nnoremap <F2> :set invpaste paste?<CR> 
+set pastetoggle=<F2>
+set showmode
+
 set clipboard=unnamed
 set noerrorbells
 set visualbell
