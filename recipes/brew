@@ -35,4 +35,5 @@ brewinstall imagemagick --with-fontconfig
 brewinstall youtube-dl
 
 brewinstall python
+brewinstall vim
 

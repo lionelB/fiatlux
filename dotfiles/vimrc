@@ -5,6 +5,11 @@ colorscheme Tomorrow-Night-Eighties
 syntax enable       " enable syntax processing
 
 "
+" Leader
+"
+let mapleader=","       " leader is comma
+
+"
 " Plugin
 "
 call plug#begin('~/.vim/plugged')
@@ -17,13 +22,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'bling/vim-airline'
 call plug#end()
 
-
 " 
 " History
 "
 if &history < 1000
 set history=1000
 endif
+
 
 
 "
@@ -52,7 +57,6 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
-set clipboard=unnamed
 set noerrorbells
 set visualbell
 set title
@@ -68,7 +72,6 @@ set gdefault            " Apply global substitutions
 set magic               " Set magic o, for regexp
 set linespace=3
 set scrolloff=3
-nnoremap <leader><space> :nohlsearch<CR>
 
 "
 " Buffer
@@ -85,7 +88,7 @@ nnoremap <space>h :bprevious<CR>
 " set foldnestmax=10      " 10 nested fold max
 " space open/closes folds
 " nnoremap <space> za
-" set foldmethod=indent   " fold based on indent level
+" set foldmet"
 
 
 "
@@ -98,14 +101,10 @@ nnoremap k gk
 nnoremap gV `[v`]
 
 
-"
-" Leader
-"
-let mapleader=","       " leader is comma
 " jk is escape
 inoremap jk <esc>
 nnoremap <leader>s :mksession<CR>
-
+nnoremap <leader><space> :nohlsearch<CR>
 
 "
 " Indent
