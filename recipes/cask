@@ -10,8 +10,11 @@ function caskinstall(){
 brewinstall caskroom/cask/brew-cask
 
 brew tap caskroom/cask
-brew tap caskroom/versions
+brew tap caskroom/fonts
+brew tap caskroom/versions # Install beta versions
 
+caskinstall font-source-code-pro-for-powerline
+caskinstall font-source-code-pro
 caskinstall flux
 
 caskinstall qlprettypatch

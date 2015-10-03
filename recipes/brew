@@ -15,9 +15,6 @@ fi
 
 brew tap homebrew/dupes
 brew tap homebrew/versions
-brew tap caskroom/cask
-brew tap caskroom/fonts
-
 
 # easy brewinstall function
 function brewinstall() {
@@ -35,5 +32,5 @@ brewinstall imagemagick --with-fontconfig
 brewinstall youtube-dl
 
 brewinstall python
-brewinstall vim
+brewinstall ag
 
