@@ -20,7 +20,6 @@ set cursorline          " highlight current line
 set hidden              " allow hidding buffer even though they contains modification 
 set relativenumber
 filetype indent on      " load filetype-specific indent files
-set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set list
@@ -39,8 +38,17 @@ set backspace=indent,eol,start
 "
 if &history < 1000
   set history=1000
+  set undofile
+  set undodir=~/.vim/undo
+  set undolevels=1000
 endif
 
+" set list " Show 'invisible' characters
+set listchars=tab:▸\ ,trail:·,nbsp:_ " Set characters used to indicate 'invisible' characters
+set showbreak=⌞
+set wrap
+set linebreak
+set nolist
 
 "
 " Indent, tabs & spaces
@@ -75,6 +83,9 @@ set scrolloff=3
 " nnoremap <space> za
 " set foldmet"
 
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
 
 
 "
@@ -94,3 +105,22 @@ set statusline=[%<%f] " Filename
 set statusline+=%w%h%m%r " Options
 set statusline+=\ %y " Type
 set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+
+"
+" Wild settings
+" 
+set wildchar=<TAB> " Character for CLI expansion (TAB-completion).
+set wildmenu
+set wildmode=full " autocomplete menu like ZSH
+
+set wildignore="" " reset
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem " Disable output and VCS files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz " Disable archive files
+set wildignore+=*/.sass-cache/* " Ignore sass cache
+set wildignore+=*/.settings/* " Ignore settings folders
+set wildignore+=*.pyc " Python byte code
+set wildignore+=*.swp,*~,._* " Ignore temp and backup files
+set wildignore+=*.png,*.jpg,*.jpeg,*.gif,*.psd,*.tiff,*.swf,*.fla " Ignore image files
+set wildignore+=*.DS_Store " Ignore .DS_Store files
+set wildignore+=*.ogg,*.mp3,*.aac " Ignore sound files
+

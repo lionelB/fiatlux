@@ -24,11 +24,6 @@ let g:ctrlp_switch_buffer = 0 " always open files in new buffers
 let g:ctrlp_use_caching = 0 " Ag is faster enough
 let g:ctrlp_extensions = ['buffertag', 'dir'] 
 let g:ctrlp_user_command = 'ag %s -l -U --nocolor --hidden -g ""'
-
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Syntastic
@@ -42,10 +37,8 @@ let g:syntastic_enable_signs = 1
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
-let g:airline#extensions#tagbar#enabled = 0
-let g:airline#extension#hunks#enabled = 0
-
 
 if !has("gui_running")
   if !exists('g:airline_symbols')
