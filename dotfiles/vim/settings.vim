@@ -2,8 +2,15 @@
 "
 " Colors
 "
-colorscheme Tomorrow-Night-Eighties
+" Default color scheme
+
+
+" colorscheme base16-tomorrow
+colorscheme molokai 
+
+set background=dark
 syntax enable       " enable syntax processing
+
 set clipboard=unnamed " yank and paste with the system clipboard
 
 " Remove delay between modes
@@ -82,6 +89,7 @@ set scrolloff=3
 " space open/closes folds
 " nnoremap <space> za
 " set foldmet"
+let xml_syntax_folding=1
 
 " Open new split panes to right and bottom
 set splitbelow
