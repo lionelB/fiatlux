@@ -8,8 +8,7 @@ backup=false
 force=$([ "$LAUNCHER_INSTALL" == true ] && echo "all" || echo "false")
 
 for source in {bash_profile,vimrc,vim,inputrc,gitignore-global,gitconfig}; do
-  dest=$HOME/".`basename $FIATLUX_PATH/dotfiles/$source`"
-
+  dest=$HOME/.$source
   if [ -L $dest ] ; then
     # $dest is a symbolic link
     echo_info "file `basename $dest` already linked!"
@@ -36,7 +35,7 @@ for source in {bash_profile,vimrc,vim,inputrc,gitignore-global,gitconfig}; do
         B) backup=all ;;
       esac
     fi
-  
+
     if [ $force == all ] || [ $force == true ]; then
       rm -rf $dest
       echo_info "remove $dest"
@@ -50,12 +49,12 @@ for source in {bash_profile,vimrc,vim,inputrc,gitignore-global,gitconfig}; do
       echo_info "skip $dest"
       [ $skip == true ] &&  skip=false
     else
-      ln -s $source $dest
+      ln -s $FIATLUX_PATH/dotfiles/$source $dest
       echo_info "$source linked to $dest"
     fi
   else
     # no conflict, create symlink
-    ln -s $source $dest
+    ln -s $FIATLUX_PATH/dotfiles/$source $dest
     echo_info "$source linked to $dest"
   fi
 done

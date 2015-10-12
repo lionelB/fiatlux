@@ -5,8 +5,7 @@
 " Default color scheme
 
 
-" colorscheme base16-tomorrow
-colorscheme molokai 
+colorscheme base16-ocean
 
 set background=dark
 syntax enable       " enable syntax processing
@@ -131,4 +130,22 @@ set wildignore+=*.swp,*~,._* " Ignore temp and backup files
 set wildignore+=*.png,*.jpg,*.jpeg,*.gif,*.psd,*.tiff,*.swf,*.fla " Ignore image files
 set wildignore+=*.DS_Store " Ignore .DS_Store files
 set wildignore+=*.ogg,*.mp3,*.aac " Ignore sound files
+
+" change cursor depending the vim mode
+set gcr=a:block
+
+" mode aware cursors
+set gcr+=o:hor50-Cursor
+set gcr+=n:Cursor
+set gcr+=i-ci-sm:InsertCursor
+set gcr+=r-cr:ReplaceCursor-hor20
+set gcr+=c:CommandCursor
+set gcr+=v-ve:VisualCursor
+
+set gcr+=a:blinkon0
+
+hi InsertCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=37  guibg=#2aa198
+hi VisualCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=125 guibg=#d33682
+hi ReplaceCursor ctermfg=15 guifg=#fdf6e3 ctermbg=65  guibg=#dc322f
+hi CommandCursor ctermfg=15 guifg=#fdf6e3 ctermbg=166 guibg=#cb4b16
 
