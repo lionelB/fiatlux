@@ -69,3 +69,9 @@ let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 "
 let g:jsx_ext_required = 0
 
+"
+" local functions
+"
+nnoremap <leader>b :call ToggleNumber()<cr>
+nnoremap <leader>ss :call StripTrailingWhitespaces()<CR>
+
