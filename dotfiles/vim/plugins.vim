@@ -29,15 +29,17 @@ call plug#end()
 
 " ctrlp
 nnoremap <C-b> :CtrlPBuffer<CR>
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'ra' " current working dir
 let g:ctrlp_switch_buffer = 0 " always open files in new buffers
 let g:ctrlp_use_caching = 0 " Ag is faster enough
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_by_filename= 1
 let g:ctrlp_extensions = ['buffertag', 'dir'] 
-let g:ctrlp_user_command = 'ag %s -l -U --nocolor --hidden -g ""'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore ={
+  \ 'dir': '\v[\/](node_modules|bower_components|\.git|\.svn|\.hg|\.tmp)$',
+  \ }
 
 "Syntastic
 let g:syntastic_javascript_checkers = ['eslint' ]
@@ -67,7 +69,7 @@ let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 " 
 " Polyglot
 "
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 "
 " local functions
