@@ -7,7 +7,7 @@ skip=false
 backup=false
 force=$([ "$LAUNCHER_INSTALL" == true ] && echo "all" || echo "false")
 
-for source in {bash_profile,vimrc,vim,inputrc,gitignore-global,gitconfig}; do
+for source in {bash_profile,vimrc,gvimrc,vim,inputrc,gitignore-global,gitconfig}; do
   dest=$HOME/.$source
   if [ -L $dest ] ; then
     # $dest is a symbolic link

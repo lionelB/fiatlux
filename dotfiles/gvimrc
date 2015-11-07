@@ -1,0 +1,6 @@
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+
+" Remove all extra UI from macvim
+set guioptions=
+
+
