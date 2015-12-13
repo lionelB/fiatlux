@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-if ! type "brew" > /dev/null; then
+if ! type brew > /dev/null; then
   echo_title "installing brew & tools"
-
-  mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+  mkdir $HOME/.homebrew && curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
   export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
   
   brew doctor
