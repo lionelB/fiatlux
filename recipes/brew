@@ -3,7 +3,9 @@
 if ! type "brew" > /dev/null; then
   echo_title "installing brew & tools"
 
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
+  export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+  
   brew doctor
 else
   echo "-- Updating brew"
