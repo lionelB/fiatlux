@@ -33,4 +33,5 @@ brewinstall youtube-dl
 
 brewinstall python
 brewinstall ag
+brewinstall neovim
 
