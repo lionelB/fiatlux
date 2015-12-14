@@ -29,3 +29,7 @@ export HISTSIZE=10000
 
 # Add ~/.local/bin to $PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+# export homebrew bin
+export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+
