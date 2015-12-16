@@ -18,3 +18,8 @@ else
   echo_fail "nvm not found"
 fi  
 
+# Installing global packages
+npm install -g lionelb/subber
+npm install -g cloc
+npm install -g parker
+
