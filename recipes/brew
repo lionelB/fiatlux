@@ -25,6 +25,8 @@ function brewinstall() {
 # Git & GihHub
 brewinstall hub
 brewinstall ghi
+brewinstall bash-completion
+brewinstall git
 
 brewinstall tree
 brewinstall exiftool
