@@ -33,4 +33,5 @@ build/Release
 node_modules
 
 # Vim
+Session.vim 
 .netrwhist
