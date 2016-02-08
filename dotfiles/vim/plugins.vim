@@ -11,17 +11,24 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
-Plug 'mtscout6/syntastic-local-eslint.vim'
+" Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
-" Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'bling/vim-airline'
+
+" Javascript
+Plug 'othree/yajs.vim', {'for': 'javascript'}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
+" Plug 'mxw/vim-jsx', {'for': 'javascript'}
+Plug 'gavocanov/vim-js-indent'
+Plug 'moll/vim-node'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 call plug#end()
@@ -42,16 +49,19 @@ let g:ctrlp_custom_ignore ={
   \ }
 
 "Syntastic
-let g:syntastic_javascript_checkers = ['eslint' ]
+let g:syntastic_javascript_checkers = ['eslint']
+if executable('./node_modules/.bin/eslint')
+  let b:syntastic_javascript_eslint_exec = './node_modules/.bin/eslint'
+endif
 nnoremap <silent> <down> :lnext<CR>
 nnoremap <silent> <up> :lprev<CR>
-let g:syntastic_check_on_open = 0
-let g:syntastic_enable_signs = 1
 
 " Miscellaneous Syntastic settings
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_wq = 1
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
