@@ -16,6 +16,10 @@ export NVM_DIR="${HOME}/.nvm"
 # fi
  
 
+for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
+  source ${FIATLUX_PATH}/dotfiles/$dotfile
+done;
+
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
   source "$(brew --prefix)/share/bash-completion/bash_completion";
@@ -25,10 +29,6 @@ fi;
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
   source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash";
 fi;
-
-for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
-  source ${FIATLUX_PATH}/dotfiles/$dotfile
-done;
 
 # highlighting inside manpages and elsewhere
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
