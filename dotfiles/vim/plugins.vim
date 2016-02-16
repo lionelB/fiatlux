@@ -31,6 +31,11 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+
+" typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
 
@@ -77,9 +82,13 @@ let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 
 
 " 
-" Polyglot
+" Typescript autocomplete
 "
-" let g:jsx_ext_required = 0
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
 
 "
 " local functions

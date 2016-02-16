@@ -20,3 +20,6 @@ if [ -L $CONFIG_DIR/nvim/init.vim ] ; then
 else
   ln -s ~/.vimrc $CONFIG_DIR/nvim/init.vim
 fi
+
+pip2 install --user neovim
+
