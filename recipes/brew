@@ -37,5 +37,5 @@ brewinstall youtube-dl
 brewinstall python
 brewinstall ag
 brewinstall neovim/neovim/neovim
-brewinstall git-flow
+brewinstall git-flow-avh
 
