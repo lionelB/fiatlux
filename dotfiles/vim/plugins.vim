@@ -33,7 +33,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
 " typescript
-Plug 'leafgarland/typescript-vim'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
