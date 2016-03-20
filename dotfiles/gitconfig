@@ -61,10 +61,11 @@
 [merge]
   # Display common-ancestor blocks in conflict hunks
   conflictStyle = diff3
+	tool = p4mergetool
 
 [mergetool]
   # Clean up backup files created by merge tools on tool exit
-  keepBackup = false
+	keepBackup = false
   # Clean up temp files created by merge tools on tool exit
   keepTemporaries = false
   # Auto-accept file prompts when launching merge tools
@@ -102,3 +103,6 @@
 [tag]
   # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
   sort = version:refname
+[mergetool "p4mergetool"]
+	cmd = ~/Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false

@@ -16,6 +16,7 @@ brew tap caskroom/versions # Install beta versions
 caskinstall font-source-code-pro-for-powerline
 caskinstall font-source-code-pro
 caskinstall flux
+caskinstall p4merge
 
 caskinstall qlprettypatch
 caskinstall karabiner
