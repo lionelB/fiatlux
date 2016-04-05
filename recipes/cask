@@ -51,9 +51,11 @@ caskinstall skype
 caskinstall dropbox
 
 caskinstall tunnelblick
-caskinstall transmission
+caskinstall deluge   
 caskinstall dash
 caskinstall sketch
 caskinstall mou
 caskinstall limechat
 
+cask install visual-studio-code
+cask install sourcetree
