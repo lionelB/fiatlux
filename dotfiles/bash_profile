@@ -49,4 +49,8 @@ if  which brew > /dev/null; then
   source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 fi;
 
+# Source github token if present
+if [[ -f $HOME/.github_token ]]; then
+  export GITHUB_TOKEN=$(cat $HOME/.github_token)
+fi
 
