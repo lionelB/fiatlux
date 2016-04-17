@@ -23,5 +23,5 @@ source $FIATLUX_PATH/scripts/dotfiles
 source $FIATLUX_PATH/scripts/recipes
 source $FIATLUX_PATH/scripts/osx
 
-echo -e " ${CHAR_DONE}${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
+echo " ${CHAR_DONE}${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
 
