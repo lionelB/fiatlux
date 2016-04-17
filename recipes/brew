@@ -39,3 +39,7 @@ brewinstall ag
 brewinstall neovim/neovim/neovim
 brewinstall git-flow-avh
 
+# React native
+brewinstall watchman
+brewinstall flow
+

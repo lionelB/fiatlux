@@ -22,4 +22,4 @@ fi
 npm install -g lionelb/subber
 npm install -g cloc
 npm install -g parker
-
+npm install -g react-native-cli 
