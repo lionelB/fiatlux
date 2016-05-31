@@ -54,3 +54,5 @@ if [[ -f $HOME/.github_token ]]; then
   export GITHUB_TOKEN=$(cat $HOME/.github_token)
 fi
 
+# Added by install_latest_perl_osx.pl
+[ -r /Users/lionel/.bashrc ] && source /Users/lionel/.bashrc
