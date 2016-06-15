@@ -3,10 +3,17 @@
 echo_info "General Ui/Ux preference"
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume="%00"
+sudo nvram SystemAudioVolume=" "
+
+
+# disable contact sync 
+launchctl unload -w /System/Library/LaunchAgents/com.apple.AddressBook.SourceSync.plist
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
+
+# Disable hibernation (speeds up entering sleep mode)
+sudo pmset -a hibernatemode 0
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true

@@ -4,9 +4,6 @@ echo_info "SSD preference"
 # Disable local Time Machine snapshots
 sudo tmutil disablelocal
 
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
-
 # Remove the sleep image file to save disk space
 sudo rm -f /private/var/vm/sleepimage
 
