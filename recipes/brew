@@ -37,6 +37,7 @@ brewinstall youtube-dl
 brewinstall python
 brewinstall ag
 brewinstall neovim/neovim/neovim
+brewinstall vim
 brewinstall git-flow-avh
 
 # React native
