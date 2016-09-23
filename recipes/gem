@@ -1,0 +1,7 @@
+
+#!/usr/bin/env bash 
+
+echo_title "Installing gems"
+
+gem install pygments.rb
+
