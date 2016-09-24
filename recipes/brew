@@ -43,4 +43,5 @@ brewinstall git-flow-avh
 # React native
 brewinstall watchman
 brewinstall flow
+brewinstall syncthing
 

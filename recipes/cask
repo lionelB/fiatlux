@@ -30,6 +30,7 @@ caskinstall quicklook-csv
 caskinstall webpquicklook
 caskinstall android-file-transfer
 caskinstall betterzipql
+caskinstall qsyncthingtray
 
 caskinstall limechat
 caskinstall imageoptim
