@@ -13,10 +13,7 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions # Install beta versions
 
-caskinstall font-source-code-pro-for-powerline
-caskinstall font-source-code-pro
-caskinstall font-inconsolata-for-powerline
-caskinstall font-inconsolata
+caskinstall font-menlo-for-powerline
 caskinstall flux
 caskinstall p4merge
 
