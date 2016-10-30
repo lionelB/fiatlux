@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # vim as default
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
@@ -17,7 +17,9 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Ignore duplicate commands in the history
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
+
+# Ignore command that start with space
 
 # Increase the maximum number of lines contained in the history file
 # (default is 500)
