@@ -39,7 +39,7 @@ caskinstall acorn
 
 caskinstall firefox
 caskinstall firefoxdeveloperedition
-caskinstall firefox-nightly
+caskinstall firefoxnightly
 caskinstall google-chrome
 caskinstall google-chrome-canary
 caskinstall opera
