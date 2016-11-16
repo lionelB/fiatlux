@@ -32,6 +32,9 @@ brewinstall exiftool
 brewinstall ffmpeg --with-libass --with-fontconfig
 brewinstall imagemagick --with-fontconfig
 brewinstall youtube-dl
+brewinstall mkvtomp4
+brewinstall mkvdts2ac3
+brewinstall mkvtoolnix
 
 brewinstall python
 brewinstall elm
