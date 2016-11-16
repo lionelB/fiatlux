@@ -56,10 +56,10 @@ caskinstall deluge
 caskinstall dash
 caskinstall sketch
 caskinstall mou
-caskinstall limechat
+cask install limechat
+cask install todoist
 
 cask install visual-studio-code
 cask install sourcetree
 cask install virtualbox
 cask install virtualbox-extension-pack
-
