@@ -2,6 +2,9 @@
 
 echo_info "Finder preferences"
 
+# Disable transparency in the menu bar and elsewhere on Yosemite
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
@@ -93,4 +96,6 @@ chflags nohidden ~/Library
 file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
