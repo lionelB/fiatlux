@@ -26,6 +26,7 @@ function brewinstall() {
 brewinstall hub
 brewinstall bash-completion
 brewinstall git
+brewinstall git-flow-avh
 
 brewinstall tree
 brewinstall exiftool
@@ -37,14 +38,12 @@ brewinstall mkvdts2ac3
 brewinstall mkvtoolnix
 
 brewinstall python
-brewinstall ag
 brewinstall vim
-brewinstall macvim
-brew linkapps macvim
-brewinstall git-flow-avh
+brewinstall yarn
 
 # React native
 brewinstall watchman
 brewinstall flow
+
 brewinstall syncthing
 
