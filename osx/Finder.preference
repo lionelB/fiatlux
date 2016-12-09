@@ -5,9 +5,6 @@ echo_info "Finder preferences"
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
 # Add Quit to the Finder’s menu
 defaults write com.apple.Finder QuitMenuItem -bool YES
 

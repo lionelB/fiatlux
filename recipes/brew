@@ -39,6 +39,8 @@ brewinstall mkvtoolnix
 brewinstall python
 brewinstall ag
 brewinstall vim
+brewinstall macvim
+brew linkapps macvim
 brewinstall git-flow-avh
 
 # React native
