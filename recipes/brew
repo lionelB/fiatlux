@@ -39,7 +39,6 @@ brewinstall mkvtoolnix
 
 brewinstall python
 brewinstall vim
-brewinstall yarn
 
 # React native
 brewinstall watchman
