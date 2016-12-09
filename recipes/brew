@@ -37,9 +37,7 @@ brewinstall mkvdts2ac3
 brewinstall mkvtoolnix
 
 brewinstall python
-brewinstall elm
 brewinstall ag
-brewinstall neovim/neovim/neovim
 brewinstall vim
 brewinstall git-flow-avh
 
