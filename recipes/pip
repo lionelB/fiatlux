@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pip2 install neovim --upgrade
+pip3 install neovim --upgrade
+

@@ -38,6 +38,7 @@ brewinstall mkvdts2ac3
 brewinstall mkvtoolnix
 
 brewinstall python
+brewinstall python3
 brewinstall vim
 
 # React native
