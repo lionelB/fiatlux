@@ -52,7 +52,7 @@ caskinstall skype
 caskinstall dropbox
 
 caskinstall tunnelblick
-caskinstall deluge   
+caskinstall transmission 
 caskinstall dash
 caskinstall sketch
 caskinstall mou
