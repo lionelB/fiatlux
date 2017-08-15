@@ -6,8 +6,7 @@
 export FIATLUX_PATH=$HOME/fiatlux
 
 export NVM_DIR="${HOME}/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+source $(brew --prefix nvm)/nvm.sh
 # set 256 color profile where possible
 # if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 #   export TERM=gnome-256color

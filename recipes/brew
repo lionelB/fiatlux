@@ -14,8 +14,6 @@ else
   brew upgrade
 fi
 
-brew tap homebrew/dupes
-brew tap homebrew/versions
 
 # easy brewinstall function
 function brewinstall() {
