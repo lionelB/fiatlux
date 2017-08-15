@@ -16,16 +16,16 @@ export CHAR_TITLE=❯
 
 
 function echo_title() {
-   printf "${COLOR_BLUE}${CHAR_TITLE} ${COLOR_CYAN}$@ ${COLOR_RESET}"
+   printf "${COLOR_BLUE}${CHAR_TITLE} ${COLOR_CYAN}$@ ${COLOR_RESET}\n"
 }
 function echo_fail() {
    printf " ${COLOR_RED}${CHAR_ERR} ${COLOR_RESET} $@i\n"
 }
 function echo_info() {
-   printf " ${COLOR_YELLOW}${CHAR_LIST}${COLOR_RESET}${COLOR_DIM} $@"
+   printf " ${COLOR_YELLOW}${CHAR_LIST}${COLOR_RESET}${COLOR_DIM} $@\n"
 }
 function echo_success() {
-   printf " ${COLOR_GREEN}${CHAR_OK} ${COLOR_RESET} $@"
+   printf " ${COLOR_GREEN}${CHAR_OK} ${COLOR_RESET} $@\n"
 }
 
 
