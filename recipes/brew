@@ -35,7 +35,7 @@ brewinstall mkvtoolnix
 
 brewinstall python
 brewinstall python3
-brewinstall vim
+brewinstall neovim
 
 # React native
 brewinstall watchman
