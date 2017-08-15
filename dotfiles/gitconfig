@@ -26,7 +26,7 @@
   # editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
   #
   # If you want to use Sublime Text 2's subl wrapper:
-  editor = vim
+  editor = nvim
   #
   # Don't consider trailing space change as a cause for merge conflicts
   whitespace = -trailing-space
