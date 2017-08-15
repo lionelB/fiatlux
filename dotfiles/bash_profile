@@ -1,19 +1,9 @@
 #!/usr/bin/env bash
 
 [ -z "$PS1" ] && return
-
-
+ 
 export FIATLUX_PATH=$HOME/fiatlux
 
-export NVM_DIR="${HOME}/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-# set 256 color profile where possible
-# if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
-#   export TERM=gnome-256color
-# elif infocmp xterm-256color >/dev/null 2>&1; then
-#   export TERM=xterm-256color
-# fi
- 
 
 for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
   source ${FIATLUX_PATH}/dotfiles/$dotfile

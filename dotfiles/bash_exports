@@ -13,7 +13,6 @@ export LANG="fr_FR"
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
 # Avoir un historique homogène même avec plusieurs terminaux
-shopt -s histappend
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Ignore duplicate commands in the history
@@ -31,7 +30,4 @@ export HISTSIZE=10000
 
 # Add ~/.local/bin to $PATH
 export PATH="$HOME/.local/bin:$PATH"
-
-# export homebrew bin
-export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 
