@@ -26,4 +26,5 @@ npm -g install parker
 npm -g install react-native-cli 
 npm -g install create-react-app
 npm -g install elm
+npm -g install npx
 
