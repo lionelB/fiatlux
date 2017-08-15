@@ -47,3 +47,4 @@ brewinstall flow
 
 brewinstall syncthing
 
+brew cleanup

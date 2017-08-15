@@ -63,3 +63,5 @@ cask install visual-studio-code
 cask install sourcetree
 cask install virtualbox
 cask install virtualbox-extension-pack
+ 
+cask cleanup
