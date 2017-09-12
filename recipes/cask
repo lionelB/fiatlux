@@ -13,8 +13,7 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions # Install beta versions
 
-caskinstall font-menlo-for-powerline
-caskinstall flux
+caskinstall font-menlo-for-powerline 
 caskinstall p4merge
 
 caskinstall qlprettypatch
@@ -56,12 +55,12 @@ caskinstall transmission
 caskinstall dash
 caskinstall sketch
 caskinstall mou
-cask install limechat
-cask install todoist
+caskinstall limechat
+caskinstall todoist
 
-cask install visual-studio-code
-cask install sourcetree
-cask install virtualbox
-cask install virtualbox-extension-pack
+caskinstall visual-studio-code
+caskinstall sourcetree
+caskinstall virtualbox
+caskinstall virtualbox-extension-pack
  
 cask cleanup
