@@ -8,7 +8,6 @@ source $HOME/.nvm/nvm.sh
 source $HOME/.bash_profile
 
 if type -t nvm > /dev/null; then
-  nvm install 6 
   nvm install node 
   nvm alias default node
   nvm use node
@@ -25,6 +24,7 @@ npm -g install cloc
 npm -g install parker
 npm -g install react-native-cli 
 npm -g install create-react-app
+npm -g install create-reactnative-app
 npm -g install elm
 npm -g install npx
 
