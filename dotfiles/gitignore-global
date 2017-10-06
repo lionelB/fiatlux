@@ -35,3 +35,6 @@ node_modules
 # Vim
 Session.vim 
 .netrwhist
+
+# vscode
+.vscode
