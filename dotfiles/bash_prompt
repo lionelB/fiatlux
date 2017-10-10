@@ -75,7 +75,6 @@ prompt_git() {
     return
   fi
 }
-
 set_prompts() {
   local black=""
   local blue=""
@@ -148,6 +147,7 @@ set_prompts() {
   PS1+="\[$reset$white\]: "
   PS1+="\[$green\]\w" # working directory
   PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
+  PS1+="\$(prompt_nvm)" # git repository details
   PS1+="\n"
   PS1+="\[$reset$white\]\$ \[$reset\]" # $ (and reset color)
 
@@ -158,3 +158,14 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
+
+prompt_nvm() {
+  if [ -f ".nvmrc" ]; then
+    version="$(node --version 2>/dev/null)"
+    if [ $? -gt 0 ]; then  
+      printf "🚨"
+    fi
+  fi
+}
+# nvm_prompt
+# unset nvm_prompt
