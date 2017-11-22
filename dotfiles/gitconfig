@@ -10,6 +10,7 @@
   br = branch
   ci = commit
   am = amend
+  cp = cherry-pick
   amend = commit --amend
   oops = commit --amend --no-edit
 
