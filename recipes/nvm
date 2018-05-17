@@ -9,7 +9,6 @@ source $HOME/.bash_profile
 
 if type -t nvm > /dev/null; then
   nvm install node 
-  nvm alias default node
   nvm use node
   echo_success "nvm & node installed"
 

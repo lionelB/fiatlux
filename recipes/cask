@@ -17,7 +17,6 @@ caskinstall font-menlo-for-powerline
 caskinstall p4merge
 
 caskinstall qlprettypatch
-caskinstall karabiner
 caskinstall prefs-editor
 caskinstall gifrocket
 
@@ -46,7 +45,6 @@ caskinstall chromium
 
 caskinstall slack
 caskinstall discord 
-caskinstall google-hangouts
 caskinstall skype
 caskinstall dropbox
 
@@ -55,7 +53,6 @@ caskinstall transmission
 caskinstall dash
 caskinstall sketch
 caskinstall mou
-caskinstall limechat
 caskinstall todoist
 
 caskinstall visual-studio-code
