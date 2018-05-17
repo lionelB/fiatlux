@@ -1,10 +1,8 @@
 #!/usr/bin/env bash 
 
 echo_title "Installing Node.js"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | PROFILE=bash_profile  bash
-
-source $HOME/.nvm/nvm.sh
 source $HOME/.bash_profile
 
 if type -t nvm > /dev/null; then
@@ -25,5 +23,4 @@ npm -g install react-native-cli
 npm -g install create-react-app
 npm -g install create-reactnative-app
 npm -g install elm
-npm -g install npx
 
