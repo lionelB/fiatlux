@@ -9,9 +9,9 @@ for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
   source ${FIATLUX_PATH}/dotfiles/$dotfile
 done;
 
-# Add bash completion
+# # Add bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+  source $(brew --prefix)/etc/bash_completion
 fi
 
 # highlighting inside manpages and elsewhere
