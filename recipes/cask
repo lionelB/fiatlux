@@ -5,6 +5,7 @@ function caskinstall(){
   brew cask install "${@}" 2> /dev/null
 }
 
+brew cask upgrade
 
 # Install formulae
 brewinstall caskroom/cask/brew-cask
@@ -54,10 +55,13 @@ caskinstall dash
 caskinstall sketch
 caskinstall mou
 caskinstall todoist
+caskinstall oni
+caskinstall patchwork
+
 
 caskinstall visual-studio-code
 caskinstall sourcetree
 caskinstall virtualbox
-caskinstall virtualbox-extension-pack
+caskinstall openscad
  
 cask cleanup
