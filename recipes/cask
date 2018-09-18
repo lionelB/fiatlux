@@ -7,19 +7,11 @@ function caskinstall(){
 
 brew cask upgrade
 
-# Install formulae
-brewinstall caskroom/cask/brew-cask
-
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap caskroom/versions # Install beta versions
-
 caskinstall font-menlo-for-powerline 
 caskinstall p4merge
 
 caskinstall qlprettypatch
 caskinstall prefs-editor
-caskinstall gifrocket
 
 caskinstall qlcolorcode
 caskinstall qlmarkdown
@@ -27,22 +19,20 @@ caskinstall quicklook-json
 caskinstall quicklook-csv
 caskinstall webpquicklook
 caskinstall android-file-transfer
-caskinstall betterzipql
+caskinstall betterzip
 caskinstall qsyncthingtray
 
-caskinstall limechat
 caskinstall imageoptim
 caskinstall image2icon
 caskinstall vlc
-caskinstall acorn
 
 caskinstall firefox
-caskinstall firefoxdeveloperedition
-caskinstall firefoxnightly
+caskinstall firefox-developer-edition
+caskinstall firefox-nightly
 caskinstall google-chrome
 caskinstall google-chrome-canary
 caskinstall opera
-caskinstall chromium 
+caskinstall chromium
 
 caskinstall slack
 caskinstall discord 
