@@ -41,11 +41,9 @@ caskinstall dropbox
 
 caskinstall tunnelblick
 caskinstall transmission 
-caskinstall dash
 caskinstall sketch
-caskinstall mou
-caskinstall todoist
 caskinstall oni
+caskinstall arduino
 caskinstall patchwork
 
 
