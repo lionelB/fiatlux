@@ -3,19 +3,20 @@
 echo_subtitle "Installing Node.js"
 
 
-if ! (command -v nvm > /dev/null) then
+if ! [ -d $HOME/.nvm ] ; then
   cd $HOME
-  echo_fail "nvm not found"
   git clone https://github.com/creationix/nvm.git .nvm
-else
-  cd $HOME/.nvm
-  git checkout v0.34.0
-  . nvm.sh
-  nvm install node 
-  nvm use node
 fi
 
-if command -v node > /dev/null then
+
+cd $HOME/.nvm
+git fetch --tags origin
+git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+source nvm.sh
+nvm install node 
+nvm use node
+
+if command -v node > /dev/null ; then
   echo_success "node installed"
 else
   echo_fail "node not found"
