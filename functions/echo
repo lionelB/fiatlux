@@ -18,6 +18,10 @@ export CHAR_TITLE=❯
 function echo_title() {
    printf "${COLOR_BLUE}${CHAR_TITLE} ${COLOR_CYAN}$@ ${COLOR_RESET}\n"
 }
+
+function echo_subtitle() {
+   printf "${COLOR_BLUE}  ${CHAR_TITLE} ${COLOR_CYAN}$@ ${COLOR_RESET}\n"
+}
 function echo_fail() {
    printf "${COLOR_RED}${CHAR_ERR} ${COLOR_RESET} $@\n"
 }

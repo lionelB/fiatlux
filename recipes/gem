@@ -1,7 +1,7 @@
 
 #!/usr/bin/env bash 
 
-echo_title "Installing gems"
+echo_subtitle "installing brew" "Installing gems"
 
 gem install pygments.rb
 
