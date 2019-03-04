@@ -13,25 +13,42 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
+" Linting multi language
+Plug 'w0rp/ale'
+" Enable eslint fix
+let g:ale_fixers = { 'javascript': ['eslint'] }
 
-" Javascript
-Plug 'othree/yajs.vim', {'for': 'javascript'}
-Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
-" Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'gavocanov/vim-js-indent'
-Plug 'moll/vim-node'
+" Support language
+Plug 'sheerun/vim-polyglot'
+
+" bloc highlighter 
+Plug 'bigfish/vim-js-context-coloring'
+
+"JsDoc
+Plug 'othree/jsdoc-syntax.vim'
+Plug 'heavenshell/vim-jsdoc'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+" AutoComplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
-" typescript
-Plug 'Valloric/YouCompleteMe'
+let g:deoplete#enable_at_startup = 1
+
+"Typescript 
+Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'tpope/vim-commentary'  " use gc / gcc to comment line 
+
 " fzf fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
