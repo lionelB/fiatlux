@@ -1,21 +1,26 @@
 #!/usr/bin/env bash 
 
 echo_title "Installing Node.js"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-source $HOME/.bash_profile 
 
-if type -t nvm > /dev/null; then
+if ! command -v nvm > /dev/null; then
+  cd $HOME
+  git clone https://github.com/creationix/nvm.git .nvm
+else
+  cd $HOME/.nvm
+  git checkout v0.34.0
+  . nvm.sh
   nvm install node 
   nvm use node
-  echo_success "nvm & node installed"
+fi
 
+if type -t node > /dev/null; then
+  echo_success "node installed"
 else
-  echo_fail "nvm not found"
+  echo_fail "nde not found"
 fi  
 
 # Installing global packages
-npm -g install yarn
 yarn global add lionelb/subber
 yarn global add cloc
 yarn global add parker
@@ -23,4 +28,5 @@ yarn global add react-native-cli
 yarn global add expo-cli
 yarn global add create-react-app 
 yarn global add elm
+yarn global add neovim
 

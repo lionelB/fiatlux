@@ -35,7 +35,11 @@ brewinstall mkvtoolnix
 
 brewinstall python
 brewinstall python3
+brewinstall pipenv
 brewinstall neovim
+brewinstall vim
+
+brew install yarn --without-node
 
 # React native
 brewinstall watchman
@@ -43,4 +47,3 @@ brewinstall flow
 
 brewinstall syncthing
 
-brew cleanup

@@ -45,7 +45,7 @@ caskinstall sketch
 caskinstall oni
 caskinstall arduino
 caskinstall patchwork
-
+caskinstall webtorrent
 
 caskinstall visual-studio-code
 caskinstall sourcetree

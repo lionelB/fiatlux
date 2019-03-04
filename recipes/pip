@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo_title "Installing Python modules"
+
 pip2 install neovim --upgrade
 pip3 install neovim --upgrade
 
