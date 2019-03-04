@@ -11,7 +11,7 @@ for file in $FIATLUX_PATH/functions/*; do
   source $file
 done
 
-echo_title " 🔆  Fiat Lux!"
+echo_title "🔆  Fiat Lux!"
 
 # ask for admin privilege
 sudo -v
@@ -23,5 +23,5 @@ source $FIATLUX_PATH/scripts/recipes
 source $FIATLUX_PATH/scripts/dotfiles
 source $FIATLUX_PATH/scripts/osx
 
-echo " ${CHAR_DONE}${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
+printf "${CHAR_DONE}${COLOR_BLUE} your setup is complete.${COLOR_RESET}"
 
