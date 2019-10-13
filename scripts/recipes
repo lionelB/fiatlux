@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 echo_title  "Adding dev recipes"
-#install nvm first
 source $FIATLUX_PATH/recipes/nvm
 
 for recipe in $(ls $FIATLUX_PATH/recipes/ | grep -v nvm | sort -n); do

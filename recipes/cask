@@ -7,18 +7,18 @@ function caskinstall(){
 
 brew cask upgrade
 
+
+caskinstall keepassx
 caskinstall font-menlo-for-powerline 
 caskinstall p4merge
 
 caskinstall qlprettypatch
-caskinstall prefs-editor
 
 caskinstall qlcolorcode
 caskinstall qlmarkdown
 caskinstall quicklook-json
 caskinstall quicklook-csv
 caskinstall webpquicklook
-caskinstall android-file-transfer
 caskinstall betterzip
 caskinstall qsyncthingtray
 
@@ -34,22 +34,17 @@ caskinstall google-chrome-canary
 caskinstall opera
 caskinstall chromium
 
-caskinstall slack
 caskinstall discord 
-caskinstall skype
 caskinstall dropbox
 
 caskinstall tunnelblick
-caskinstall transmission 
 caskinstall sketch
-caskinstall oni
 caskinstall arduino
 caskinstall patchwork
 caskinstall webtorrent
 
-caskinstall visual-studio-code
 caskinstall sourcetree
 caskinstall virtualbox
 caskinstall openscad
- 
+caskinstall vscodium 
 cask cleanup

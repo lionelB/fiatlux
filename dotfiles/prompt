@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # bash_prompt
 
@@ -159,13 +159,3 @@ set_prompts() {
 set_prompts
 unset set_prompts
 
-prompt_nvm() {
-  if [ -f ".nvmrc" ]; then
-    version="$(node --version 2>/dev/null)"
-    if [ $? -gt 0 ]; then  
-      printf "🚨"
-    fi
-  fi
-}
-# nvm_prompt
-# unset nvm_prompt

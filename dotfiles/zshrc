@@ -1,17 +1,24 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 [ -z "$PS1" ] && return
  
 export FIATLUX_PATH=$HOME/fiatlux
 
 
-for dotfile in {bash_options,bash_exports,bash_aliases,bash_prompt}; do
+for dotfile in {options,exports,aliases,prompt}; do
   source ${FIATLUX_PATH}/dotfiles/$dotfile
 done;
 
-# # Add bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
+# Add bash completion
+for completion in git-completion.bash
+do 
+  if [ -r $(brew --prefix)/etc/bash_completion.d/$completion ]; then
+    source $(brew --prefix)/etc/bash_completion.d/$completion
+  fi
+done
+
+if [ -r $(brew --prefix)/etc/profile.d/bash_completion.sh ]; then
+  source $(brew --prefix)/etc/profile.d/bash_completion.sh
 fi
 
 # highlighting inside manpages and elsewhere
@@ -28,9 +35,6 @@ if [[ -f $HOME/.github_token ]]; then
   export GITHUB_TOKEN=$(cat $HOME/.github_token)
 fi
 
-# Added by install_latest_perl_osx.pl
-[ -r /Users/lionel/.bashrc ] && source /Users/lionel/.bashrc
-
 
 # FZF 
 # --files: List files that would be searched but do not search
@@ -42,6 +46,9 @@ fi
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*, !.node_modules/*, !.bower_components/*"'
  
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fnm
+
+eval "$(fnm env --multi --use-on-cd)"
+
+
+ssh-add -K ~/.ssh/air_lumo

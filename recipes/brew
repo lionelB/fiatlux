@@ -19,9 +19,10 @@ function brewinstall() {
 
 # Git & GihHub
 brewinstall hub
-brewinstall bash-completion
+brewinstall bash-completion@2
 brewinstall git
-brewinstall git-flow-avh
+brewinstall trash
+
 
 brewinstall tree
 brewinstall exiftool
@@ -32,6 +33,7 @@ brewinstall mkvtomp4
 brewinstall mkvdts2ac3
 brewinstall mkvtoolnix
 
+brewinstall Schniz/tap/fnm
 brewinstall python
 brewinstall python3
 brewinstall pipenv
@@ -42,7 +44,5 @@ brew install yarn --without-node
 
 # React native
 brewinstall watchman
-brewinstall flow
 
-brewinstall syncthing
 

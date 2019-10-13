@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 alias mkdir="mkdir -p"
 
 # IP address 
