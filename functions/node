@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh 
+
+function setup_nodejs() {
+  echo_subtitle "Installing Node.js"
+ 
+  # # Installing global packages
+  # yarn global add lionelb/subber
+  # yarn global add cloc
+  # yarn global add parker
+  # yarn global add react-native-cli 
+  # yarn global add expo-cli
+  # yarn global add create-react-app 
+  # yarn global add elm
+  # yarn global add neovim 
+}

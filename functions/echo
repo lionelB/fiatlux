@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 export COLOR_RED='\033[0;31m'
 export COLOR_GREEN='\033[0;32m'
@@ -31,5 +31,3 @@ function echo_info() {
 function echo_success() {
    printf "${COLOR_GREEN}${CHAR_OK} ${COLOR_RESET} $@\n"
 }
-
-

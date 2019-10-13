@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+function setup_nvim() {
+  CONFIG_DIR=$HOME/.config
+  if [ ! -d $CONFIG_DIR ]; then
+  #  mkdir -p CONFIG_DIR
+  echo "$CONFIG_DIR exists"
+  fi
+
+  if [ -L $CONFIG_DIR/nvim ] ; then
+    # nvim is a symbolic link
+    echo_info "./nvim already linked!"
+  else
+    ln -s ~/.vim $CONFIG_DIR/nvim
+  fi
+
+
+  if [ -L $CONFIG_DIR/nvim/init.vim ] ; then
+    #init.vim  is a symbolic link
+    echo_info "./init.vim already linked!"
+  else
+    ln -s ~/.vimrc $CONFIG_DIR/nvim/init.vim
+  fi
+
+  pip2 install --user neovim
+}

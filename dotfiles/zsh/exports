@@ -1,0 +1,71 @@
+#!/usr/bin/env zsh
+
+# vim as default
+export EDITOR="nvim"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Prefer Fr  and use UTF-8
+export LC_ALL="fr_FR.UTF-8"
+export LANG="fr_FR"
+
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+
+# Avoir un historique homogène même avec plusieurs terminaux
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Ignore duplicate commands in the history
+export HISTCONTROL=ignoreboth
+
+# Ignore command that start with space
+
+# Increase the maximum number of lines contained in the history file
+# (default is 500)
+export HISTFILESIZE=10000
+
+# Increase the maximum number of commands to remember
+# (default is 500)
+export HISTSIZE=10000
+
+# Add ~/.local/bin to $PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# highlighting inside manpages and elsewhere
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# Set the default Less options.
+# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
+# Remove -X and -F (exit if the content fits on one screen) to enable it.
+export LESS='-F -g -i -M -R -S -w -X -z-4'
+
+# Set the Less input preprocessor.
+# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
+if (( $#commands[(i)lesspipe(|.sh)] )); then
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+fi
+
+# Source github token if present
+if [[ -f $HOME/.github_token ]]; then
+  export GITHUB_TOKEN=$(cat $HOME/.github_token)
+fi
+
+
+# FZF 
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*, !.node_modules/*, !.bower_components/*"'
+ 
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi

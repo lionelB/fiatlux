@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+function setup_python () {
+
+  echo_subtitle "Installing Python modules"
+
+  pip2 install neovim --upgrade
+  pip3 install neovim --upgrade
+
+}

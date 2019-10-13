@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+function setup_ruby() {
+  echo_subtitle "installing brew" "Installing gems"
+  
+  gem install pygments.rb
+}
+
+

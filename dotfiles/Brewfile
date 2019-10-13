@@ -1,0 +1,78 @@
+tap "homebrew/cask"
+cask_args appdir: "~/Applications"
+
+# brew
+
+brew "bash-completion@2"
+brew "trash"
+brew "tree"
+
+## git & co
+brew "hub"
+brew "ghi"
+brew "git"
+
+## Image & video
+brew "exiftool"
+brew "ffmpeg", args:["--with-libass", "--with-fontconfig"]
+brew "imagemagick", args:["--with-fontconfig"]
+brew "youtube-dl"
+brew "mkvtomp4"
+brew "mkvdts2ac3"
+brew "mkvtoolnix"
+
+## Programming
+brew "python"
+brew "python3"
+brew "pipenv"
+brew "Schniz/tap/fnm"
+brew "yarn", args: ["--without-node"]
+brew "jq"
+
+## Code edit
+brew "vim"
+brew "neovim"
+
+## React native
+brew "watchman"
+
+# Cask
+cask "keepassx"
+cask "font-menlo-for-powerline"
+cask "p4merge"
+
+cask "qlprettypatch"
+
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "quicklook-csv"
+cask "webpquicklook"
+cask "betterzip"
+cask "qsyncthingtray"
+
+cask "imageoptim"
+cask "image2icon"
+cask "vlc"
+
+cask "firefox"
+cask "firefox-developer-edition"
+cask "firefox-nightly"
+cask "google-chrome"
+cask "google-chrome-canary"
+cask "opera"
+cask "chromium"
+
+cask "discord"
+cask "dropbox"
+
+cask "tunnelblick"
+cask "sketch"
+cask "arduino"
+cask "patchwork"
+cask "webtorrent"
+
+cask "sourcetree"
+cask "virtualbox"
+cask "openscad"
+cask "vscodium"

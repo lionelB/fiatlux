@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 #Export fiat_lux path
 export FIATLUX_PATH=$HOME/fiatlux
@@ -38,6 +38,9 @@ if ! xcode-select --print-path &> /dev/null; then
   print_result $? 'Agree with the XCode Command Line Tools licence'
 fi
 
+# install prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
 if [ ! -d $FIATLUX_PATH/.git ]; then
   git clone $FIATLUX_REPO $FIATLUX_PATH
 fi
@@ -49,8 +52,18 @@ if [ -d $FIATLUX_PATH/.git ]; then
 
   export LAUNCHER_INSTALL=true
 
-  source $FIATLUX_PATH/updater
+  dotfiles()
 
-  echo "Aborting  fiat-lux launcher"
+  source $FIATLUX_PATH/updater
+  
+  setup_nvim()
+
+  setup_node()
+
+  setup_ruby()
+
+  setup_python()
+
+  echo_success "setup complete !"
 fi
 
