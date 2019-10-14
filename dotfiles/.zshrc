@@ -21,6 +21,9 @@ done;
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}

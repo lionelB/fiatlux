@@ -1,4 +1,10 @@
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/cask-drivers"
+tap "adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver", "https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver.git"
+tap "homebrew/cask-fonts" 
+tap "schniz/tap"
+
 cask_args appdir: "~/Applications"
 
 # brew
@@ -6,6 +12,8 @@ cask_args appdir: "~/Applications"
 brew "bash-completion@2"
 brew "trash"
 brew "tree"
+brew "zsh-history-substring-search"
+brew "unrar"
 
 ## git & co
 brew "hub"
@@ -14,8 +22,8 @@ brew "git"
 
 ## Image & video
 brew "exiftool"
-brew "ffmpeg", args:["--with-libass", "--with-fontconfig"]
-brew "imagemagick", args:["--with-fontconfig"]
+brew "ffmpeg"
+brew "imagemagick"
 brew "youtube-dl"
 brew "mkvtomp4"
 brew "mkvdts2ac3"
@@ -26,8 +34,8 @@ brew "python"
 brew "python3"
 brew "pipenv"
 brew "Schniz/tap/fnm"
-brew "yarn", args: ["--without-node"]
 brew "jq"
+brew "yarn" 
 
 ## Code edit
 brew "vim"
@@ -38,10 +46,10 @@ brew "watchman"
 
 # Cask
 cask "keepassx"
+cask "docker"
 cask "font-menlo-for-powerline"
-cask "p4merge"
-
-cask "qlprettypatch"
+cask "p4v"
+cask "wch-ch34x-usb-serial-driver"
 
 cask "qlcolorcode"
 cask "qlmarkdown"
