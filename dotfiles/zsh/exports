@@ -69,3 +69,5 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
+
+export SCARF_ANALYTICS=false

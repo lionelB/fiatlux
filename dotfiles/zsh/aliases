@@ -34,3 +34,7 @@ alias week='date +%V'
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+function share() { 
+  echo "sharing $1"
+  teleconsole -f "$1" 
+}

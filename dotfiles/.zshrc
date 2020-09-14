@@ -17,12 +17,7 @@ done
 for file in $FIATLUX_PATH/dotfiles/zsh/*; do
   source $file
 done;
- 
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
 
-
-source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -30,11 +25,14 @@ path=(
   $path
 )
 
+# search history
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
-# Add bash completion
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
+# # Add bash completion
+# if type brew &>/dev/null; then
+#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# fi
 
 
 # fnm

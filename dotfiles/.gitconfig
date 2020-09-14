@@ -88,8 +88,8 @@
 
 [rerere]
   # If, like me, you like rerere, uncomment these
-  # autoupdate = true
-  # enabled = true
+  autoupdate = true
+  enabled = true
 
 [status]
   # Display submodule rev change summaries in status
