@@ -9,6 +9,8 @@ for file in $FIATLUX_PATH/dotfiles/zsh/*; do
   source $file
 done;
 
+prompt pure
+
 
 # Set the list of directories that Zsh searches for programs.
 path=(
